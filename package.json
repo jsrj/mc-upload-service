@@ -1,15 +1,21 @@
 {
-  "author": "YOU <YOU@example.com>",
-  "name": "my_actionhero_project",
-  "description": "my actionhero project",
+  "author": "jsrj <rj.javadev@icloud.com>",
+  "name": "mc-upload-service",
+  "description": "MakerCloud Amazon S3 Upload Service",
+  "license": "GNU General Public License v2.0",
   "version": "0.1.0",
   "engines": {
     "node": ">=8.0.0"
   },
   "dependencies": {
     "actionhero": "19.0.4",
+    "chai": "^4.2.0",
     "ioredis": "latest",
     "jshint": "^2.9.6",
+    "mocha": "^5.2.0",
+    "mongoose": "^5.3.15",
+    "sinon": "^7.1.1",
+    "sinon-mongoose": "^2.2.1",
     "winston": "latest",
     "ws": "latest"
   },
