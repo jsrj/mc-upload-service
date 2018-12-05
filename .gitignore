@@ -1,0 +1,12 @@
+### Node ###
+node_modules
+
+### FileSystem ###
+.DS_Store
+
+### Config ###
+.env
+
+### Project ###
+log/
+pids/
