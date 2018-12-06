@@ -6,8 +6,8 @@ const maxBackoff = 1000
 
 if (process.env.REDIS_URL) {
   password = process.env.REDIS_URL.match(/redis:\/\/.*:(.*)@.*:\d*$/i)[1]
-  host = process.env.REDIS_URL.match(/redis:\/\/.*:.*@(.*):\d*$/i)[1]
-  port = parseInt(process.env.REDIS_URL.match(/redis:\/\/.*:.*@.*:(\d*)$/i)[1])
+  host     = process.env.REDIS_URL.match(/redis:\/\/.*:.*@(.*):\d*$/i)[1]
+  port     = parseInt(process.env.REDIS_URL.match(/redis:\/\/.*:.*@.*:(\d*)$/i)[1])
 }
 
 exports['default'] = {
