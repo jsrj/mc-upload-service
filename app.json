@@ -1,0 +1,8 @@
+{
+    "name": "mc-upload-service",
+    "description": "MakerCloud Amazon S3 Upload Service",
+    "keywords": [],
+    "website": "",
+    "repository": "https://github.com/jsrj/mc-upload-service",
+    "logo": ""
+}
