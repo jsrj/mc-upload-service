@@ -1,4 +1,5 @@
-# My actionhero Project
+# MakerCloud - Upload Service
+[![GitHub version](https://badge.fury.io/gh/jsrj%2Fmc-upload-service.svg)](https://badge.fury.io/gh/jsrj%2Fmc-upload-service)
 
 *visit www.actionherojs.com for more information*
 
