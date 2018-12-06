@@ -27,7 +27,7 @@
     "start": "actionhero start",
     "actionhero": "actionhero",
     "pretest": "standard",
-    "test-api": "mocha __tests__/integration/apiTests.js"
+    "test": "mocha __tests__/integration/apiTests.js"
   },
   "standard": {
     "ignore": [
