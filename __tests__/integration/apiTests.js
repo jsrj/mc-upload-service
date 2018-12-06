@@ -21,8 +21,8 @@ describe('Upload an image to an Amazon S3 Bucket', function () {
       ImageDataMock.verify()
       ImageDataMock.restore()
       // expect(result.status).to.be.true;
-      done()
     })
+    done()
   })
 
   // Failure Scenario: If an error occurs when attempting to upload to Amazon S3
@@ -37,7 +37,7 @@ describe('Upload an image to an Amazon S3 Bucket', function () {
       ImageDataMock.verify()
       ImageDataMock.restore()
       // expect(err.status).to.not.be.true;
-      done()
     })
+    done()
   })
 })
