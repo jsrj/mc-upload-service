@@ -7,7 +7,7 @@ require('sinon-mongoose');
 
 
 // Import the ImageData model for testing routes that would return an ImageData object
-var ImageData = require('../../src/model/ImageData');
+const ImageData = require('../../src/model/ImageData');
 
 // Upload an image to S3
 describe("Upload an image to an Amazon S3 Bucket", function(){
