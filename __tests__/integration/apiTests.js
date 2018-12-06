@@ -29,8 +29,8 @@ describe("Upload an image to an Amazon S3 Bucket", function(){
     // Failure Scenario: If an error occurs when attempting to upload to Amazon S3
     it("Should return an error on failure to upload", function(done){
 
-        var ImageDataMock  = sinon.mock(ImageData);
-        var expectedResult = {status: false, error: "Something went wrong"};
+        let ImageDataMock  = sinon.mock(ImageData);
+        let expectedResult = {status: false, error: "Something went wrong"};
 
         ImageDataMock.expects('find').yields(expectedResult, null);
 
