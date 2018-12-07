@@ -5,18 +5,25 @@ module.exports = class GlobalInitializer extends ActionHero.Initializer {
   constructor () {
     super()
     this.name = 'global'
-    this.loadPriority = 1000
+    this.loadPriority = 9000
     this.startPriority = 9000
-    this.stopPriority = 1000
+    this.stopPriority = 1
+
+    // This must be placed in the constructor block to be executed ASAP
+    // Otherwise, it will not set environment variables and server will use defaults
+    require('dotenv').config()
   }
 
   async initialize () {
-    ActionHero.api['global'] = {}
+    ActionHero.api['global'] = {
+      // Place all globally accessible properties here
+    }
   }
 
   async start () {
-    console.log('Global Initializer triggered...');
-    require('dotenv').config()
+    // All logic that need to be initialized for the entire application on server start
+    console.log('--- Global Initializer Executed Successfully ---');
+  
   }
   async stop () {}
 }
