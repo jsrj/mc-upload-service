@@ -22,8 +22,7 @@ module.exports = class GlobalInitializer extends ActionHero.Initializer {
 
   async start () {
     // All logic that need to be initialized for the entire application on server start
-    console.log('--- Global Initializer Executed Successfully ---');
-  
+    console.log('--- Global Initializer Executed Successfully ---')
   }
   async stop () {}
 }

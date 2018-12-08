@@ -1,7 +1,7 @@
 'use strict'
-const aws = require('aws-sdk');
-const multer = require('multer');
-const multerS3 = require('multer-s3');
+const aws = require('aws-sdk')
+// const multer = require('multer')
+// const multerS3 = require('multer-s3')
 const ActionHero = require('actionhero')
 
 module.exports = class S3Uploader extends ActionHero.Initializer {
@@ -26,9 +26,9 @@ module.exports = class S3Uploader extends ActionHero.Initializer {
 
       // constants
       // ...
-      
+
       // Methods
-      upload: function(ownerName, imageData) {}
+      upload: function (ownerName, imageData) {}
     }
   }
 
