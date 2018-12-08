@@ -1,7 +1,7 @@
 'use strict'
 const ActionHero = require('actionhero')
 
-module.exports = class MyInitializer extends ActionHero.Initializer {
+module.exports = class Middleware extends ActionHero.Initializer {
   constructor () {
     super()
     this.name = 'middleware'
