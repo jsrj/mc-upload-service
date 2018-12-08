@@ -14,13 +14,13 @@ module.exports = class MyInitializer extends ActionHero.Initializer {
     ActionHero.api['userManager'] = {
 
       // constants
-      usersHash: "uploaderServiceUsers",
+      usersHash: 'uploaderServiceUsers',
 
       // methods
-      addUser: function(userName, password){},
-      listUsers: function(){},
-      authenticateUsers: function(userName, password){},
-      deleteUser: function(userName, password){},
+      addUser: function (userName, password) {},
+      listUsers: function () {},
+      authenticateUser: function (userName, password) {},
+      deleteUser: function (userName, password) {}
     }
   }
 
