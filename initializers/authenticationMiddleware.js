@@ -22,7 +22,7 @@ module.exports = class AuthenticationMiddleware extends ActionHero.Initializer {
       }
     }
 
-    api.actions.addMiddleware(authMiddleware)
+    ActionHero.api.actions.addMiddleware(authMiddleware)
   }
 
   async start () {}
