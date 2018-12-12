@@ -30,7 +30,8 @@ exports['default'] = {
         {path: '/users', action: 'listUsers'}
       ],
       post: [
-        {path: '/users/new', action: 'addUser'}
+        {path: '/users/new', action: 'addUser'},
+        {path: 'users/login', action: 'authenticateUser'}
       ],
       put: [],
       patch: [],
