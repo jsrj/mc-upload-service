@@ -71,8 +71,8 @@ module.exports.authenticate = class AuthenticateUser extends ActionHero.Action {
 
   async run ({ response, params }) {
     let token = await ActionHero.api.userManager.authenticateUser(params.userName, params.password)
-    if (token.length === 0) { 
-      throw new Error('unable to log in') 
+    if (token.length === 0) {
+      throw new Error('unable to log in')
     } else {
       response.token = token
     }
