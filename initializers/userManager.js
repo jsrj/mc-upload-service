@@ -21,7 +21,14 @@ module.exports = class MyInitializer extends ActionHero.Initializer {
         console.log("Request to add user: "+userName+" with password of: "+password);
       },
 
-      listUsers: function () {},
+      listUsers: function () {
+        return [
+          {userName:'one user'}, 
+          {userName:'two user'}, 
+          {userName:'red user'}, 
+          {userName:'blue user'}
+        ]
+      },
 
       authenticateUser: function (userName, password) {},
 
