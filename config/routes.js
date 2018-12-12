@@ -1,8 +1,47 @@
 exports['default'] = {
   routes: (api) => {
-    return {
+    const routingList = {
+      get: [],
+      post: [],
+      put: [],
+      patch: [],
+      delete: []
+    }
 
-      /* ---------------------
+    // Users Resource Routes
+    routingList.get.push( // GET Methods
+      { path: '/users', action: 'listUsers' } // GET All Users
+    )
+    routingList.post.push( // POST Methods
+      { path: '/users/new', action: 'addUser' }, // POST A New User
+      { path: 'users/login', action: 'authenticateUser' } // POST To Authenticate A User
+    )
+    routingList.put.push( // PUT Methods
+    )
+    routingList.patch.push( // PATCH Methods
+    )
+    routingList.delete.push( // DELETE Methods
+      { path: '/users/delete', action: 'deleteUser' } // DELETE A User
+    )
+
+    // Images Resource Routes
+    routingList.get.push( // GET Methods
+    )
+    routingList.post.push( // POST Methods
+      { path: 'images/new', action: 'uploadImage' } // POST A New Image to S3
+    )
+    routingList.put.push( // PUT Methods
+    )
+    routingList.patch.push( // PATCH Methods
+    )
+    routingList.delete.push( // DELETE Methods
+    )
+
+    return routingList
+  }
+}
+
+/* ---------------------
       routes.js
 
       For web clients (http and https) you can define an optional RESTful mapping to help route requests to actions.
@@ -26,18 +65,3 @@ exports['default'] = {
       ]
 
       ---------------------- */
-      get: [
-        {path: '/users', action: 'listUsers'}
-      ],
-      post: [
-        {path: '/users/new', action: 'addUser'},
-        {path: 'users/login', action: 'authenticateUser'}
-      ],
-      put: [],
-      patch: [],
-      delete: [
-        {path: '/users/delete', action: 'deleteUser'}
-      ]
-    }
-  }
-}

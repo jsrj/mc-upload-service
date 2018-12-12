@@ -18,27 +18,27 @@ module.exports = class MyInitializer extends ActionHero.Initializer {
 
       // methods
       addUser: function (userName, password) {
-        console.log("Request to add user: "+userName+" with password of: "+password);
+        console.log('Request to add user: ' + userName + ' with password of: ' + password)
       },
 
       listUsers: function () {
         return [
-          {userName:'one user'}, 
-          {userName:'two user'}, 
-          {userName:'red user'}, 
-          {userName:'blue user'}
+          { userName: 'one user' },
+          { userName: 'two user' },
+          { userName: 'red user' },
+          { userName: 'blue user' }
         ]
       },
 
       authenticateUser: function (userName, password) {
-        console.log("Request to authenticate user: "+userName+" using password of: "+password);
-        
-        let validUser = userName == "valid" && password == "test";
-        return (validUser)
+        console.log('Request to authenticate user: ' + userName + ' using password of: ' + password)
+
+        let validUser = userName === 'valid' && password === 'test'
+        return (validUser) ? 'adfoausdfoi23987asd9f87as9d8f9823b' : ''
       },
 
       deleteUser: function (userName, password) {
-        console.log("Request to delete user with userName of: "+userName+" and password of: "+password);
+        console.log('Request to delete user with userName of: ' + userName + ' and password of: ' + password)
       }
     }
   }
