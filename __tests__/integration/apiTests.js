@@ -1,21 +1,22 @@
-// const sinon = require('sinon')
-// const chai = require('chai')
-// const expect = chai.expect
+const r2 = require('r2')
+const ActionHero = require('actionhero')
+const ahProcess = new ActionHero.Process()
 
-// const mongoose = require('mongoose');
-// require('sinon-mongoose')
+let url
 
-// Import the ImageData model for testing routes that would return an ImageData object
-// const ImageData = require('../../src/model/ImageData')
-
-// Upload an image to S3
-describe('Upload an image to an Amazon S3 Bucket:', function () {
-  it('- should upload successfully, and return newly generated ImageData JSON', function (done) {
-    done()
+describe('Local API Integration Tests', () => {
+  beforeAll(async () => {
+    await ahProcess.start() // Can be set to variable named "api"
+    url = `http://localhost:8081/api`
   })
+  afterAll(async () => ahProcess.stop())
 
-  // Failure Scenario: If an error occurs when attempting to upload to Amazon S3
-  it('- should return an error on failure to upload', function (done) {
-    done()
+  describe('--- Images ---', () => {
+    // Image uploads successfully when user is authenticated
+    test('- should upload successfully when user is authenticated"', async () => {
+      const res = await r2.post(`${url}/images/new`, { json: { userName: 'test', password: 'test', data: 'PRETEND_FILE', token: '' } }).json
+      console.log(res)
+      expect(res.error).toBeUndefined()
+    })
   })
 })
