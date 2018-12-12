@@ -26,9 +26,9 @@ exports['default'] = {
       ]
 
       ---------------------- */
-      // get: [
-      //   {path: '/users', action: 'listUsers'}
-      // ],
+      get: [
+        {path: '/users', action: 'listUsers'}
+      ],
       post: [
         {path: '/users/new', action: 'addUser'}
       ],
