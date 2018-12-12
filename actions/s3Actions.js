@@ -4,7 +4,7 @@ const ActionHero = require('actionhero')
 module.exports = class MyAction extends ActionHero.Action {
   constructor () {
     super()
-    this.name = 'upload'
+    this.name = 's3Actions'
     this.description = 'an actionhero action'
     this.outputExample = {}
   }
