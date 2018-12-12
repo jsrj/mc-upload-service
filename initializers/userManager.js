@@ -17,10 +17,29 @@ module.exports = class MyInitializer extends ActionHero.Initializer {
       usersHash: 'uploaderServiceUsers',
 
       // methods
-      addUser: function (userName, password) {},
-      listUsers: function () {},
-      authenticateUser: function (userName, password) {},
-      deleteUser: function (userName, password) {}
+      addUser: function (userName, password) {
+        console.log("Request to add user: "+userName+" with password of: "+password);
+      },
+
+      listUsers: function () {
+        return [
+          {userName:'one user'}, 
+          {userName:'two user'}, 
+          {userName:'red user'}, 
+          {userName:'blue user'}
+        ]
+      },
+
+      authenticateUser: function (userName, password) {
+        console.log("Request to authenticate user: "+userName+" using password of: "+password);
+        
+        let validUser = userName == "valid" && password == "test";
+        return (validUser)
+      },
+
+      deleteUser: function (userName, password) {
+        console.log("Request to delete user with userName of: "+userName+" and password of: "+password);
+      }
     }
   }
 

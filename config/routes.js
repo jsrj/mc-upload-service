@@ -26,7 +26,18 @@ exports['default'] = {
       ]
 
       ---------------------- */
-
+      get: [
+        {path: '/users', action: 'listUsers'}
+      ],
+      post: [
+        {path: '/users/new', action: 'addUser'},
+        {path: 'users/login', action: 'authenticateUser'}
+      ],
+      put: [],
+      patch: [],
+      delete: [
+        {path: '/users/delete', action: 'deleteUser'}
+      ]
     }
   }
 }
