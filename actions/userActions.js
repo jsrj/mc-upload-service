@@ -55,3 +55,22 @@ module.exports.listUsers = class ListUsers extends ActionHero.Action {
     response.users = users.map((user) => { return user.userName })
   }
 }
+
+module.exports.authenticate = class AuthenticateUser extends ActionHero.Action {
+  constructor () {
+    super()
+    this.name = 'authenticateUser'
+    this.description = 'Authenticate A User'
+    this.outputExample = {}
+    this.authenticated = false
+    this.inputs = {
+      userName: { required: true },
+      password: { required: true }
+    }
+  }
+
+  async run ({ response, params }) {
+    response.authenticated = await ActionHero.api.userManager.authenticateUser(params.userName, params.password)
+    if (!response.authenticated) { throw new Error('unable to log in') }
+  }
+}

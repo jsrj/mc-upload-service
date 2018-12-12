@@ -30,7 +30,12 @@ module.exports = class MyInitializer extends ActionHero.Initializer {
         ]
       },
 
-      authenticateUser: function (userName, password) {},
+      authenticateUser: function (userName, password) {
+        console.log("Request to authenticate user: "+userName+" using password of: "+password);
+        
+        let validUser = userName == "valid" && password == "test";
+        return (validUser)
+      },
 
       deleteUser: function (userName, password) {
         console.log("Request to delete user with userName of: "+userName+" and password of: "+password);
