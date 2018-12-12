@@ -38,3 +38,20 @@ module.exports.deleteUser = class DeleteUser extends ActionHero.Action {
     await ActionHero.api.userManager.deleteUser(params.userName, params.password)
   }
 }
+
+// List All Users
+module.exports.listUsers = class ListUsers extends ActionHero.Action {
+  constructor () {
+    super()
+    this.name = 'listUsers'
+    this.description = 'List All Users'
+    this.outputExample = {}
+    this.authenticated = false
+    this.inputs = {}
+  }
+
+  async run ({ response, params }) {
+    let users = await ActionHero.api.userManager.listUsers()
+    response.users = users.map((user) => { return user.userName })
+  }
+}
